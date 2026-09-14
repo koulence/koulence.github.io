@@ -384,22 +384,26 @@ ul {
 }
 
 /* ==========================================================================
-   HLAVNÍ ROZCESTÍ (SERVICES HUB) - NOVÉ CHOVÁNÍ DLAŽDIC PŘI HOVERU
+   HLAVNÍ ROZCESTÍ (SERVICES HUB)
    ========================================================================== */
 .services-hub-section {
-    padding: 7rem 0;
+    padding: 3.5rem 0;
     background-color: var(--bg-primary);
+}
+
+.services-hub-section .section-header {
+    margin-bottom: 1.75rem;
 }
 
 .hub-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2.5rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
 }
 
 .hub-card {
     position: relative;
-    height: 520px;
+    height: 320px;
     border-radius: 4px;
     overflow: hidden;
     box-shadow: var(--shadow-soft);
@@ -410,11 +414,10 @@ ul {
 }
 
 .hub-card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-6px);
     box-shadow: var(--shadow-hover);
 }
 
-/* Výchozí stav fotografie: Plný jas a kontrast */
 .card-bg {
     position: absolute;
     inset: 0;
@@ -424,14 +427,12 @@ ul {
     filter: brightness(1);
 }
 
-/* Po najetí myší: Fotografie se ztmaví a mírně přiblíží */
 .hub-card:hover .card-bg,
 .hub-card.active .card-bg {
     transform: scale(1.05);
     filter: brightness(0.35);
 }
 
-/* Tmavý gradientní přeliv: Ve výchozím stavu skrytý, aktivuje se při hoveru */
 .card-overlay {
     position: absolute;
     inset: 0;
@@ -446,41 +447,42 @@ ul {
     opacity: 1;
 }
 
-/* Štítek s názvem kategorie v levém horním rohu - VÝCHOZÍ PRAVÝ HORNÍ HORNÍ PRVEK */
+/* OPRAVA KOLIZE: Štítek se při hoveru / aktivaci plynule skryje */
 .card-top-badge {
     position: absolute;
-    top: 1.5rem;
-    left: 1.5rem;
+    top: 1.25rem;
+    left: 1.25rem;
     z-index: 3;
     background-color: var(--accent-gold);
     color: #FFFFFF;
-    padding: 0.55rem 1.25rem;
+    padding: 0.45rem 1rem;
     border-radius: 30px;
     font-family: var(--font-serif);
-    font-size: 1.2rem;
+    font-size: 1.05rem;
     font-weight: 600;
     letter-spacing: 0.03em;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     transition: var(--transition-smooth);
     pointer-events: none;
+    opacity: 1;
+    visibility: visible;
 }
 
 .hub-card:hover .card-top-badge,
 .hub-card.active .card-top-badge {
-    background-color: #FFFFFF;
-    color: var(--text-primary);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
 }
 
-/* Kompletní obsah karty - ve výchozím stavu SKRYTÝ, zobrazuje se po najetí myší */
 .card-content {
     position: relative;
     z-index: 2;
-    padding: 3rem;
+    padding: 1.5rem;
     color: #FFFFFF;
     width: 100%;
     opacity: 0;
-    transform: translateY(25px);
+    transform: translateY(20px);
     transition: opacity 0.4s ease, transform 0.4s ease;
     pointer-events: none;
 }
@@ -493,46 +495,53 @@ ul {
 }
 
 .card-tag {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     font-weight: 700;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.18em;
     color: var(--accent-gold);
     display: block;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.35rem;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.85);
 }
 
 .card-title {
-    font-size: 2.25rem;
+    font-size: 1.6rem;
     color: #FFFFFF;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.4rem;
+    line-height: 1.2;
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.85);
 }
 
 .card-text {
     color: rgba(255, 255, 255, 0.9);
-    font-size: 0.95rem;
-    margin-bottom: 1.5rem;
-    max-width: 90%;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    margin-bottom: 0.85rem;
+    max-width: 100%;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.85);
 }
 
 .card-features {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
-    margin-bottom: 2rem;
+    gap: 0.5rem;
+    margin-bottom: 1.1rem;
 }
 
 .card-features li {
-    font-size: 0.8rem;
+    font-size: 0.725rem;
     background: rgba(0, 0, 0, 0.45);
-    padding: 0.35rem 0.85rem;
+    padding: 0.25rem 0.65rem;
     border-radius: 20px;
     backdrop-filter: blur(8px);
     border: 1px solid rgba(255, 255, 255, 0.25);
     color: #FFFFFF;
     text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+.hub-card .btn {
+    padding: 0.55rem 1.15rem;
+    font-size: 0.725rem;
 }
 
 /* ==========================================================================
@@ -918,11 +927,12 @@ input:focus, select:focus, textarea:focus {
 }
 
 /* ==========================================================================
-   RESPONSIVITA & MOBILNÍ OPRAVY
+   RESPONSIVITA (TABLET: 2 SLOUPCE, MOBIL: 1 SLOUPEC)
    ========================================================================== */
 @media (max-width: 1024px) {
     .hub-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
     }
     .pillars-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -984,43 +994,44 @@ input:focus, select:focus, textarea:focus {
         bottom: 1.25rem;
     }
 
+    .hub-grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+
     .hub-card {
-        height: auto;
-        min-height: 460px;
+        height: 320px;
     }
 
     .card-top-badge {
-        top: 1.25rem;
-        left: 1.25rem;
-        font-size: 1rem;
-        padding: 0.45rem 1rem;
+        top: 1rem;
+        left: 1rem;
+        font-size: 0.95rem;
+        padding: 0.4rem 0.85rem;
     }
 
     .card-content {
-        padding: 1.75rem 1.25rem;
+        padding: 1.25rem;
     }
 
     .card-title {
-        font-size: 1.75rem;
-        margin-bottom: 0.5rem;
+        font-size: 1.5rem;
+        margin-bottom: 0.35rem;
     }
 
     .card-text {
-        font-size: 0.875rem;
-        margin-bottom: 1rem;
-        max-width: 100%;
+        font-size: 0.8rem;
+        margin-bottom: 0.75rem;
     }
 
     .card-features {
-        margin-bottom: 1.25rem;
-        gap: 0.5rem;
+        margin-bottom: 0.85rem;
+        gap: 0.4rem;
     }
 
     .hub-card .btn {
-        padding: 0.65rem 1.25rem;
-        font-size: 0.75rem;
-        width: auto;
-        display: inline-flex;
+        padding: 0.5rem 1rem;
+        font-size: 0.7rem;
     }
 
     .form-row {
