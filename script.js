@@ -11,7 +11,25 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    /* 2. AUTO-SELECT CATEGORY IN CONTACT FORM */
+    /* 2. OVLÁDÁNÍ MOBILNÍHO DOTYKU PRO DLAŽDICE SLUŽEB */
+    const hubCards = document.querySelectorAll('.hub-card');
+    hubCards.forEach(card => {
+        card.addEventListener('click', (e) => {
+            // Pokud uživatel klikne přímo na akční tlačítko, neblokujeme proklik
+            if (e.target.closest('.btn')) return;
+            
+            // Na mobilních zařízeních přepínáme třídu active pro rozbalení / skrytí popisu
+            if (window.innerWidth <= 768) {
+                const isActive = card.classList.contains('active');
+                hubCards.forEach(c => c.classList.remove('active'));
+                if (!isActive) {
+                    card.classList.add('active');
+                }
+            }
+        });
+    });
+
+    /* 3. AUTO-SELECT CATEGORY IN CONTACT FORM */
     const selectButtons = document.querySelectorAll('.select-service-btn');
     const serviceSelect = document.getElementById('serviceSelect');
 
@@ -31,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    /* 3. PORTFOLIO FILTERING */
+    /* 4. PORTFOLIO FILTERING */
     const filterButtons = document.querySelectorAll('.filter-btn');
     const portfolioItems = document.querySelectorAll('.portfolio-item');
 
@@ -52,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    /* 4. ANIMACE POČÍTADEL (STATS COUNTER) */
+    /* 5. ANIMACE POČÍTADEL (STATS COUNTER) */
     const statNumbers = document.querySelectorAll('.stat-number');
     let animated = false;
 
@@ -88,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    /* 5. FORM SUBMISSION (DEMO HANDLER) */
+    /* 6. FORM SUBMISSION (DEMO HANDLER) */
     const leadForm = document.getElementById('leadForm');
     if (leadForm) {
         leadForm.addEventListener('submit', (e) => {
