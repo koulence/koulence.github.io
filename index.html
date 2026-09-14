@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profesionální Fotografka | Exkluzivní Fotografické Služby</title>
+    <meta name="description" content="Prémiové fotografické služby: Fotokoutky, Nemovitosti & 3D Matterport, Svatby, Rodiny, Portréty a Eventy.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- STICKY HEADER -->
+    <header class="site-header" id="header">
+        <div class="header-container">
+            <a href="#" class="brand-logo">
+                <span class="logo-name">BARBORA FUHRMANNOVÁ</span>
+                <span class="logo-sub">PHOTOGRAPHY</span>
+            </a>
+            
+            <nav class="main-nav" id="mainNav">
+                <ul>
+                    <li><a href="#services-hub" class="nav-link">Služby</a></li>
+                    <li><a href="#why-me" class="nav-link">O mně</a></li>
+                    <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                    <li><a href="#testimonials" class="nav-link">Reference</a></li>
+                    <li><a href="#contact" class="nav-link">Kontakt</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a href="tel:+420777123456" class="phone-link">+420 777 123 456</a>
+                <a href="#contact" class="btn btn-gold-outline btn-sm">Poptat termín</a>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Otevřít menu">
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO SEKCE -->
+        <section class="hero-section">
+            <div class="hero-bg-overlay"></div>
+            <div class="container hero-content">
+                <span class="hero-subtitle">PRÉMIOVÁ FOTOGRAFICKÁ TVORBA</span>
+                <h1 class="hero-title">Světlo, emoce a vizuální dokonalost pro váš projekt i životní okamžiky.</h1>
+                <p class="hero-description">Specializované fotografické služby s garancí špičkové kvality, estetického citu a B2B spolehlivosti.</p>
+                <div class="hero-cta-group">
+                    <a href="#services-hub" class="btn btn-gold">Vybrat typ focení</a>
+                    <a href="#portfolio" class="btn btn-trans">Prohlédnout práce</a>
+                </div>
+            </div>
+            <div class="hero-scroll-indicator">
+                <span>VYBERTE SLUŽBU</span>
+                <div class="arrow-down"></div>
+            </div>
+        </section>
+
+        <!-- HLAVNÍ VIZUÁLNÍ ROZCESTÍ (6 KATEGORIÍ) -->
+        <section class="services-hub-section" id="services-hub">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-badge">KAM SMĚŘUJETE?</span>
+                    <h2 class="section-title">Jaký typ fotografie právě hledáte?</h2>
+                    <p class="section-subtitle">Zvolte si kategorii pro okamžitý přehled služeb, ukázek a nezávaznou poptávku.</p>
+                </div>
+
+                <div class="hub-grid">
+                    <!-- 1. FOTOKOUTKY -->
+                    <article class="hub-card" data-category="fotokoutky">
+                        <div class="card-bg" style="background-image: url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1200&q=80');"></div>
+                        <div class="card-overlay"></div>
+                        <div class="card-content">
+                            <span class="card-tag">FIREMNÍ I SOUKROMÉ AKCE</span>
+                            <h3 class="card-title">Fotokoutky</h3>
+                            <p class="card-text">Mobilní fotokoutek s okamžitým tiskem fotografií, profesionální obsluhou, rekvizitami a grafikou s logem na míru.</p>
+                            <ul class="card-features">
+                                <li>Okamžitý tisk na místě</li>
+                                <li>Branded grafika na míru</li>
+                                <li>Stylové rekvizity & obsluha</li>
+                            </ul>
+                            <div class="card-action">
+                                <a href="#contact" class="btn btn-champagne select-service-btn" data-service="Fotokoutky">Poptat fotokoutek</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 2. NEMOVITOSTI & PRODUKTY -->
+                    <article class="hub-card" data-category="nemovitosti">
+                        <div class="card-bg" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80');"></div>
+                        <div class="card-overlay"></div>
+                        <div class="card-content">
+                            <span class="card-tag">KOMERČNÍ PREZENTACE</span>
+                            <h3 class="card-title">Nemovitosti & Produkty</h3>
+                            <p class="card-text">Špičková prezentace pro realitní makléře, architekty a firmy. Zvyšte prodejní cenu nemovitosti i produktů.</p>
+                            <ul class="card-features">
+                                <li>Matterport 3D prohlídky</li>
+                                <li>Letecké fotografie z dronu</li>
+                                <li>Home Staging & Produkty</li>
+                            </ul>
+                            <div class="card-action">
+                                <a href="#contact" class="btn btn-champagne select-service-btn" data-service="Nemovitosti & Produkty">Poptat prezentaci</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 3. SVATBY -->
+                    <article class="hub-card" data-category="svatby">
+                        <div class="card-bg" style="background-image: url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80');"></div>
+                        <div class="card-overlay"></div>
+                        <div class="card-content">
+                            <span class="card-tag">EMOČNÍ REPORTÁŽ</span>
+                            <h3 class="card-title">Svatby</h3>
+                            <p class="card-text">Kompletní zachycení vašeho svatebního příběhu. Od ranních příprav po večerní oslavu s neopakovatelnou atmosférou.</p>
+                            <ul class="card-features">
+                                <li>Celodenní fotografování</li>
+                                <li>Předsvatební párové focení</li>
+                                <li>Luxusní tištěné fotoknihy</li>
+                            </ul>
+                            <div class="card-action">
+                                <a href="#contact" class="btn btn-champagne select-service-btn" data-service="Svatby">Rezervovat termín</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 4. NOVOROZENCI & RODINY -->
+                    <article class="hub-card" data-category="rodiny">
+                        <div class="card-bg" style="background-image: url('https://images.unsplash.com/photo-1555252333-9f8e92e65df9?auto=format&fit=crop&w=1200&q=80');"></div>
+                        <div class="card-overlay"></div>
+                        <div class="card-content">
+                            <span class="card-tag">RODINNÉ VZPOMÍNKY</span>
+                            <h3 class="card-title">Novorozenci & Rodiny</h3>
+                            <p class="card-text">Jemné a přirozené fotografie vašich nejbližších. Bezpečný ateliér i exteriérové focení plné lásky a smíchu.</p>
+                            <ul class="card-features">
+                                <li>Sensitivní newborn ateliér</li>
+                                <li>Těhotenské & Rodinné focení</li>
+                                <li>Školky, školy & Vánoce</li>
+                            </ul>
+                            <div class="card-action">
+                                <a href="#contact" class="btn btn-champagne select-service-btn" data-service="Novorozenci & Rodiny">Poptat rodinné focení</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 5. PORTRÉTY -->
+                    <article class="hub-card" data-category="portrety">
+                        <div class="card-bg" style="background-image: url('https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1200&q=80');"></div>
+                        <div class="card-overlay"></div>
+                        <div class="card-content">
+                            <span class="card-tag">OSOBNÍ BRANDING</span>
+                            <h3 class="card-title">Portréty</h3>
+                            <p class="card-text">Autentické a reprezentativní portréty, které podtrhnou vaši osobnost, profesionalitu i přirozenou krásu.</p>
+                            <ul class="card-features">
+                                <li>Business & Headshots</li>
+                                <li>Osobní & Brandingové portréty</li>
+                                <li>Glamour & Boudoir</li>
+                            </ul>
+                            <div class="card-action">
+                                <a href="#contact" class="btn btn-champagne select-service-btn" data-service="Portréty">Poptat portrét</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 6. EVENTY & PLESY -->
+                    <article class="hub-card" data-category="eventy">
+                        <div class="card-bg" style="background-image: url('https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1200&q=80');"></div>
+                        <div class="card-overlay"></div>
+                        <div class="card-content">
+                            <span class="card-tag">REPORTÁŽNÍ FOTOGRAFIE</span>
+                            <h3 class="card-title">Eventy & Plesy</h3>
+                            <p class="card-text">Dynamické zachycení atmosféry firemních večírků, konferencí, maturitních plesů a společenských událostí.</p>
+                            <ul class="card-features">
+                                <li>Rychlé odevzdání (do 48h)</li>
+                                <li>Tiskové & PR rozlišení</li>
+                                <li>Diskrétní a pohotový přístup</li>
+                            </ul>
+                            <div class="card-action">
+                                <a href="#contact" class="btn btn-champagne select-service-btn" data-service="Eventy & Plesy">Poptat event</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROČ SI VYBRAT PRÁVĚ MĚ -->
+        <section class="why-me-section" id="why-me">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-badge">STANDARD KVALITY</span>
+                    <h2 class="section-title">Proč klienti volí dlouhodobou spolupráci</h2>
+                </div>
+
+                <div class="pillars-grid">
+                    <div class="pillar-card">
+                        <div class="pillar-icon">01</div>
+                        <h3>Rychlost & Dodržení Termínů</h3>
+                        <p>U komerčních zakázek a eventů dostáváte první náhledy do 24 hodin a kompletní zakázku do 3 pracovních dnů.</p>
+                    </div>
+
+                    <div class="pillar-card">
+                        <div class="pillar-icon">02</div>
+                        <h3>Top Technika & Dron</h3>
+                        <p>Pracuji s plnoformátovými snímači Sony Alpha, certifikovanou kamerou Matterport Pro2 a 4K drony DJI.</p>
+                    </div>
+
+                    <div class="pillar-card">
+                        <div class="pillar-icon">03</div>
+                        <h3>B2B Smlouva & Licencování</h3>
+                        <p>Jasně definované autorské licence pro komerční užití, řádná fakturace a stoprocentní zastupitelnost.</p>
+                    </div>
+
+                    <div class="pillar-card">
+                        <div class="pillar-icon">04</div>
+                        <h3>Lidskost & Vedení</h3>
+                        <p>Ať už stojíte před fotoaparátem poprvé, nebo pořádáte akci pro 1000 lidí, vždy vás uvolním a provedu celým procesem.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PORTFOLIO SHOWCASE -->
+        <section class="portfolio-section" id="portfolio">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-badge">PORTFOLIO</span>
+                    <h2 class="section-title">Vybraná tvorba</h2>
+                </div>
+
+                <div class="portfolio-filters">
+                    <button class="filter-btn active" data-filter="all">Vše</button>
+                    <button class="filter-btn" data-filter="svatby">Svatby</button>
+                    <button class="filter-btn" data-filter="nemovitosti">Nemovitosti</button>
+                    <button class="filter-btn" data-filter="portrety">Portréty</button>
+                    <button class="filter-btn" data-filter="eventy">Eventy</button>
+                </div>
+
+                <div class="portfolio-grid">
+                    <div class="portfolio-item" data-category="svatby">
+                        <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=800&q=80" alt="Svatební portrét">
+                        <div class="item-overlay">
+                            <span>Svatby</span>
+                            <h4>Zámecká svatba Chateau Mcely</h4>
+                        </div>
+                    </div>
+                    <div class="portfolio-item" data-category="nemovitosti">
+                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" alt="Luxusní rezidence">
+                        <div class="item-overlay">
+                            <span>Nemovitosti</span>
+                            <h4>Rezidence Smíchov Haven</h4>
+                        </div>
+                    </div>
+                    <div class="portfolio-item" data-category="portrety">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80" alt="Business portrét">
+                        <div class="item-overlay">
+                            <span>Portréty</span>
+                            <h4>CEO Executive Branding</h4>
+                        </div>
+                    </div>
+                    <div class="portfolio-item" data-category="eventy">
+                        <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=800&q=80" alt="Gala večer">
+                        <div class="item-overlay">
+                            <span>Eventy</span>
+                            <h4>Výroční Gala Večer</h4>
+                        </div>
+                    </div>
+                    <div class="portfolio-item" data-category="svatby">
+                        <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=800&q=80" alt="Svatební okamžik">
+                        <div class="item-overlay">
+                            <span>Svatby</span>
+                            <h4>Romantický obřad v přírodě</h4>
+                        </div>
+                    </div>
+                    <div class="portfolio-item" data-category="nemovitosti">
+                        <img src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=800&q=80" alt="Moderní kuchyně">
+                        <div class="item-overlay">
+                            <span>Nemovitosti</span>
+                            <h4>Penthouse Praha 1</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- REFERENCE KLIENTŮ -->
+        <section class="testimonials-section" id="testimonials">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-badge">DŮVĚRA A EXPERTIZE</span>
+                    <h2 class="section-title">Co říkají klienti</h2>
+                </div>
+
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">"Barbora pro nás připravovala kompletní prezentaci vily včetně 3D prohlídky Matterport a fotografií z dronu. Nemovitost se prodala za rekordní cenu během dvou týdnů."</p>
+                        <div class="testimonial-author">
+                            <strong>Ing. Martin Dvořák</strong>
+                            <span>Senior Broker, Luxury Estate</span>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">"Fotokoutek na našem firemním večírku pro 400 lidí byl naprostý hit. Rychlý tisk, krásné rekvizity a personalizovaná grafika s naším logem. Příští rok opakujeme!"</p>
+                        <div class="testimonial-author">
+                            <strong>Kateřina Blažková</strong>
+                            <span>Event Manager, TechVision</span>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">"Měli jsme Bářin celodenní svatební servis. Fotografie jsou neuvěřitelně živé, elegantní a zachycují přesně ty nejsilnější emoce. Lepší volbu jsme si nemohli přát."</p>
+                        <div class="testimonial-author">
+                            <strong>Lucie & Tomáš Novákovi</strong>
+                            <span>Novomanželé</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STATISTIKY DŮVĚRY -->
+        <section class="stats-section">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="10">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">Let zkušeností</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="450">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">Realizovaných eventů</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="130">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">Nafocených svateb</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="100">0</span><span class="stat-symbol">%</span>
+                        <span class="stat-label">Spolehlivost & spokojenost</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- KONTAKTNÍ SEKCE (KONVERZNÍ FORMULÁŘ) -->
+        <section class="contact-section" id="contact">
+            <div class="container">
+                <div class="contact-wrapper">
+                    <div class="contact-info">
+                        <span class="section-badge">NEZÁVAZNÁ POPTÁVKA</span>
+                        <h2 class="contact-title">Pojďme vytvořit něco výjimečného.</h2>
+                        <p class="contact-desc">Máte dotaz, plánujete akci nebo potřebujete rezervovat termín focení? Vyplňte formulář nebo mi přímo zavolejte.</p>
+                        
+                        <div class="direct-contacts">
+                            <div class="contact-item">
+                                <span class="ci-label">Telefon:</span>
+                                <a href="tel:+420777123456" class="ci-value">+420 777 123 456</a>
+                            </div>
+                            <div class="contact-item">
+                                <span class="ci-label">E-mail:</span>
+                                <a href="mailto:info@fotoface.cz" class="ci-value">info@fotoface.cz</a>
+                            </div>
+                            <div class="contact-item">
+                                <span class="ci-label">Lokalita:</span>
+                                <span class="ci-value">Praha & Celá ČR / Zahraničí</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-container">
+                        <form id="leadForm" class="lead-form">
+                            <div class="form-group">
+                                <label for="serviceSelect">Vyberte požadovanou službu *</label>
+                                <select id="serviceSelect" name="service" required>
+                                    <option value="" disabled selected>Zvolte kategorii...</option>
+                                    <option value="Fotokoutky">Fotokoutky (Mobilní koutek s tiskem)</option>
+                                    <option value="Nemovitosti & Produkty">Nemovitosti & Produkty (Matterport, Dron)</option>
+                                    <option value="Svatby">Svatby (Svatební reportáž)</option>
+                                    <option value="Novorozenci & Rodiny">Novorozenci & Rodiny</option>
+                                    <option value="Portréty">Portréty (Business, Personal, Boudoir)</option>
+                                    <option value="Eventy & Plesy">Eventy & Plesy (Firemní akce, plesy)</option>
+                                </select>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="userName">Jméno a příjmení / Firma *</label>
+                                    <input type="text" id="userName" name="name" placeholder="Jan Novák / Company s.r.o." required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="userEmail">E-mailová adresa *</label>
+                                    <input type="email" id="userEmail" name="email" placeholder="jan@novak.cz" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="userPhone">Telefonní číslo *</label>
+                                    <input type="tel" id="userPhone" name="phone" placeholder="+420 123 456 789" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="eventDate">Plánované datum / Místo</label>
+                                    <input type="text" id="eventDate" name="date" placeholder="např. 15. 10. 2026, Praha">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="userMessage">Detailní zpráva / Požadavky</label>
+                                <textarea id="userMessage" name="message" rows="4" placeholder="Popište vaše představy, rozsah akce nebo dotazy..."></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-gold btn-block">Odeslat nezávaznou poptávku</button>
+                            <p class="form-privacy">Odesláním formuláře souhlasíte se zpracováním osobních údajů pro účely odpovědi.</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <span class="logo-name">BARBORA FUHRMANNOVÁ</span>
+                    <span class="logo-sub">PHOTOGRAPHY</span>
+                    <p>Exkluzivní fotografické služby pro B2B i soukromou klientelu s důrazem na eleganci, emoce a detail.</p>
+                </div>
+
+                <div class="footer-nav">
+                    <h4>Kategorie služeb</h4>
+                    <ul>
+                        <li><a href="#services-hub">Fotokoutky</a></li>
+                        <li><a href="#services-hub">Nemovitosti & Produkty</a></li>
+                        <li><a href="#services-hub">Svatební fotografie</a></li>
+                        <li><a href="#services-hub">Novorozenci & Rodiny</a></li>
+                        <li><a href="#services-hub">Portréty & Branding</a></li>
+                        <li><a href="#services-hub">Eventy & Plesy</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h4>Kontakt & Adresa</h4>
+                    <p>Ateliér & Kancelář: Praha 1</p>
+                    <p>Tel: +420 777 123 456</p>
+                    <p>Email: info@fotoface.cz</p>
+                    <p>IČO: 12345678</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Barbora Fuhrmannová Photography. Všechna práva vyhrazena.</p>
+                <div class="footer-legal">
+                    <a href="#">Ochrana osobních údajů</a>
+                    <a href="#">Obchodní podmínky</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
