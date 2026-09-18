@@ -938,6 +938,34 @@ input:focus, select:focus, textarea:focus {
 }
 
 @media (max-width: 768px) {
+    /* Zajištění stejných okrajů hlavičky a obsahu stránky na mobilu pro perfektní lícování */
+    .container,
+    .header-container {
+        padding: 0 1.25rem;
+    }
+
+    .header-container {
+        height: 70px;
+    }
+
+    .logo-name {
+        font-size: 1.05rem;
+    }
+
+    .logo-sub {
+        font-size: 0.55rem;
+    }
+
+    .header-actions {
+        gap: 0.5rem;
+    }
+
+    .header-actions .btn-sm {
+        padding: 0.5rem 0.85rem;
+        font-size: 0.7rem;
+        white-space: nowrap;
+    }
+
     .main-nav, .header-actions .phone-link {
         display: none;
     }
